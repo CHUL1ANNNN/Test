@@ -1,0 +1,8 @@
+Vercel Environment Variables
+
+No environment variables are required for the current repository state.
+
+Notes:
+- The current auth storage uses local file `users.json` for local development.
+- For production on Vercel, persistent storage should be replaced with an external service (for example a database/KV),
+  and its credentials should be added here in a future step.

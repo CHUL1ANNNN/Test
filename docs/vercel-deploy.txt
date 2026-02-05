@@ -1,0 +1,12 @@
+Vercel Deployment Parameters (Stage 1/2)
+
+- Framework: Other (static HTML + custom Node server for local dev)
+- Root Directory: . (repository root)
+- Install Command: npm install
+- Build Command: npm run build
+- Output Directory: . (root static files)
+
+Why:
+- Frontend files (`index.html`, `styles.css`, `script.js`) are located in repo root.
+- There is no framework-specific compile step.
+- `server.js` remains for local run (`npm start`) and local API behavior.

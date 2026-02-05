@@ -1,0 +1,11 @@
+PR Plan: Simple Auth UI + Minimal Server Responses
+
+- [ ] Create basic registration UI (email + password fields, submit button, simple success/error state).
+- [ ] Create basic login UI (email + password fields, submit button, simple success/error state).
+- [ ] Add minimal server response stubs/endpoints for register and login (mock/placeholder responses only).
+- [ ] Connect UI forms to minimal server responses and display returned messages.
+- [ ] Verify scope boundaries in this PR and avoid additional auth/security features.
+
+Scope boundaries for THIS PR:
+- Included: basic registration + login interface and minimal server responses.
+- Excluded: security hardening, email/SMS verification, tokens/sessions, password hashing, CAPTCHA.
