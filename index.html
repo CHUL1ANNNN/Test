@@ -3,28 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Auth UI</title>
+    <title>Simple Auth - Supabase</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <main class="app-shell">
-      <h1>Simple Auth UI</h1>
+      <h1>Простая аутентификация</h1>
 
+      <!-- Экран регистрации -->
       <section id="register-screen" class="screen">
         <h2>Регистрация</h2>
         <p id="register-message" class="message" role="alert" aria-live="polite"></p>
         <form id="register-form" novalidate>
           <label>
             Email
-            <input type="email" id="register-email" placeholder="email@example.com" />
-          </label>
-          <label>
-            Телефон
-            <input type="tel" id="register-phone" placeholder="+79991234567" />
+            <input type="email" id="register-email" placeholder="email@example.com" required />
           </label>
           <label>
             Пароль
-            <input type="password" id="register-password" placeholder="Минимум 6 символов" />
+            <input type="password" id="register-password" placeholder="Минимум 6 символов" required />
+          </label>
+          <label>
+            Телефон (опционально)
+            <input type="tel" id="register-phone" placeholder="+79991234567" />
           </label>
           <button type="submit">Зарегистрироваться</button>
         </form>
@@ -34,33 +35,42 @@
         </p>
       </section>
 
+      <!-- Экран входа -->
       <section id="login-screen" class="screen hidden">
         <h2>Вход</h2>
         <p id="login-message" class="message" role="alert" aria-live="polite"></p>
         <form id="login-form" novalidate>
           <label>
-            Email или телефон
-            <input type="text" id="login-identity" placeholder="email или номер телефона" />
+            Email
+            <input type="email" id="login-email" placeholder="email@example.com" required />
           </label>
           <label>
             Пароль
-            <input type="password" id="login-password" placeholder="Введите пароль" />
+            <input type="password" id="login-password" placeholder="Введите пароль" required />
           </label>
           <button type="submit">Войти</button>
         </form>
         <p>
           Нет аккаунта?
-          <button id="go-register" type="button" class="link-btn">Регистрация</button>
+          <button id="go-register" type="button" class="link-btn">Зарегистрироваться</button>
         </p>
       </section>
 
-      <section id="welcome-screen" class="screen hidden">
-        <h2>Добро пожаловать</h2>
-        <p>Вы вошли в систему.</p>
-        <button id="logout" type="button">Выйти</button>
+      <!-- Экран статуса (после входа) -->
+      <section id="status-screen" class="screen hidden">
+        <h2>Статус</h2>
+        <div class="status-info">
+          <p>Вы вошли в систему как:</p>
+          <p><strong id="status-email">—</strong></p>
+        </div>
+        <button id="logout-btn" type="button" class="btn-logout">Выйти</button>
       </section>
     </main>
 
-    <script src="script.js"></script>
+    <!-- Подключаем Supabase JS Client из ESM CDN ДО других скриптов -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- Наше приложение (модуль) -->
+    <script type="module" src="./app.js"></script>
   </body>
 </html>

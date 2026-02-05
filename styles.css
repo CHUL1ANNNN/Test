@@ -80,6 +80,34 @@ button:hover {
   color: #047857;
 }
 
+.status-info {
+  background: #f0fdf4;
+  border-left: 4px solid #22c55e;
+  padding: 12px;
+  border-radius: 4px;
+  margin: 12px 0;
+}
+
+.status-info p {
+  margin: 4px 0;
+}
+
+#logout-btn {
+  width: 100%;
+  padding: 12px;
+  background: #ef4444;
+  margin-top: 16px;
+}
+
+#logout-btn:hover {
+  background: #dc2626;
+}
+
+#logout-btn:disabled {
+  background: #a3a3a3;
+  cursor: not-allowed;
+}
+
 .hidden {
   display: none;
 }

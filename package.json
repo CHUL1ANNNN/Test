@@ -1,10 +1,12 @@
 {
-  "name": "auth-interface-agent",
+  "name": "auth-supabase-static",
   "private": true,
   "version": "1.0.0",
-  "description": "Simple auth training app",
+  "description": "Простая аутентификация через Supabase на статическом сайте",
   "scripts": {
-    "build": "node -e \"console.log('No build step required: static assets are in repository root.')\"",
     "start": "node server.js"
+  },
+  "engines": {
+    "node": "18"
   }
 }
